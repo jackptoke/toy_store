@@ -1,0 +1,23 @@
+<% if @toys.blank? %>
+<p>There is no toy in the catalog</p>
+<% else %>
+<h1>Toy Catalog</h1>
+<table class="toys">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date Posted</th>
+        <th>User</th>
+    </tr>
+    <% @toys.each do |toy| %>
+        <tr>
+            <td><%= toy.id %></td>
+            <td><%= toy.name %></td>
+            <td><%= toy.description %></td>
+            <td><%= toy.date_posted %></td>
+            <td><%= toy.user %></td>
+        </tr>
+    <% end %>
+</table>
+<% end %>

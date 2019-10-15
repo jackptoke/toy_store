@@ -1,0 +1,23 @@
+<h1>Toy Detail</h1>
+<ul>
+<li>
+Name: <%= @toy.name %><br>
+</li>
+<li>
+Description: <%= @toy.description %><br>
+</li>
+<li>
+Posted Date: <%= @toy.date_posted %><br>
+</li>
+<li>
+User: <%= @toy.user %>
+</li>
+
+<li>
+    <%= link_to 'Edit', {:action => 'edit', :id => @toy.id } %>
+</li>
+
+<li>
+    <%= link_to 'Destroy', @toy, method: :delete, data: {confirm: "Are you sure?"} %>
+</li>
+</ul>
